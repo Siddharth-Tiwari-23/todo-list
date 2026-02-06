@@ -1,0 +1,21 @@
+{
+  "name": "todo-list",
+  "version": "1.0.0",
+  "description": "node js project",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Siddharth-Tiwari-23/todo-list.git"
+  },
+  "license": "ISC",
+  "author": "Siddharth Tiwari",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^4.0.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  }
+}
