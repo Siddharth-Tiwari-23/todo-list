@@ -4,22 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Task</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 </head>
 <body>
     <%- include('navbar') %>
     
-     <div class="container">
-        <h1>Update Task Page</h1>
-        
-        <form action="/update" class="todo-form" method="POST">
-            <input class="input" type="text" placeholder="Enter Task Title" name="title" >
-            <br><br>
+    <div class="container">
+        <div class="update-card">
+            <h1>Update Task Page</h1>
+            
+            <form action="/update/<%= result._id %>" method="POST">
+                <div class="form-group">
+                    <input type="text" name="title" value="<%= result.title %>" class="modern-input" placeholder="Task Title">
+                </div>
 
-            <textarea class="input" name="description" placeholder="Enter description" rows="4"></textarea>
-            <br><br>
-            <button type="submit" class="btn">Add New Task</button>
-        </form>
+                <div class="form-group">
+                    <textarea name="description" class="modern-input" rows="5" placeholder="Description"><%= result.description %></textarea>
+                </div>
+
+                <button type="submit" class="modern-btn">Update Task</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
